@@ -1,0 +1,17 @@
+use strict;
+use inc::Module::Install;
+name 'POE-Filter-Zlib';
+author 'Chris Williams <chris@bingosnet.co.uk>';
+license 'perl';
+perl_version '5.000';
+version_from 'lib/POE/Filter/Zlib.pm';
+abstract_from 'lib/POE/Filter/Zlib.pm';
+build_requires 'Test::More' => 0.47;
+build_requires 'POE::Filter::Stackable' => 0;
+build_requires 'POE::Filter::Line' => 0;
+requires 'warnings::compat' => 0 if $] < 5.006;
+requires 'Carp' => 0;
+requires 'Compress::Raw::Zlib' => 2.000;
+requires 'POE'    => 0.38;
+requires 'POE::Filter' => 0;
+WriteAll();
