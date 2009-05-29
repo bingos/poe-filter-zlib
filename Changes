@@ -1,6 +1,9 @@
 POE::Filter::Zlib
 =================
 
+2.02	Fri May 29 12:10:47 BST 2009
+	- Makefile.PL meta fixes.
+
 2.01	Thu Jun 12 15:30:40 BST 2008
 	- Patch from Martijn van Beers [RT #36655]
 	- Patch from Martijn van Beers [RT #36657]

@@ -8,7 +8,7 @@ use Compress::Raw::Zlib qw(Z_FINISH);
 
 use vars qw($VERSION);
 
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 sub new {
   return POE::Filter::Zlib::Stream->new(flushtype => Z_FINISH);
@@ -50,7 +50,7 @@ L<POE::Filter::Zlib::Stream> is recommended for that type of activity.
 
 =over
 
-=item new
+=item C<new>
 
 Creates a new POE::Filter::Zlib object. Takes one optional argument, 
 
@@ -64,27 +64,27 @@ Consult L<Compress::Zlib> for details.
 
 =over
 
-=item get
+=item C<get>
 
-=item get_one_start
+=item C<get_one_start>
 
-=item get_one
+=item C<get_one>
 
 Takes an arrayref which is contains lines of compressed input. Returns an arrayref of uncompressed lines.
 
-=item get_pending
+=item C<get_pending>
 
 Returns any data in a filter's input buffer. The filter's input buffer is not cleared, however.
 
-=item put
+=item C<put>
 
 Takes an arrayref containing lines of uncompressed output, returns an arrayref of compressed lines.
 
-=item clone
+=item C<clone>
 
 Makes a copy of the filter, and clears the copy's buffer.
 
-=item level
+=item C<level>
 
 Sets the level of compression employed to the given value. If no value is supplied, returns the current level setting.
 
@@ -98,7 +98,7 @@ Martijn van Beers <martijn@cpan.org>
 
 =head1 LICENSE
 
-Copyright C<(c)> Chris Williams and Martijn van Beers.
+Copyright E<copy> Chris Williams and Martijn van Beers.
 
 This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 

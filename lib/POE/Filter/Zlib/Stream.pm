@@ -7,7 +7,7 @@ use Compress::Raw::Zlib qw(Z_OK Z_STREAM_END Z_FINISH Z_SYNC_FLUSH);
 use vars qw($VERSION);
 use base qw(POE::Filter);
 
-$VERSION = '2.01';
+$VERSION = '2.02';
 
 sub new {
   my $type = shift;
@@ -133,7 +133,7 @@ Ideal for streaming compressed data over sockets.
 
 =over
 
-=item new
+=item C<new>
 
 Creates a new POE::Filter::Zlib::Stream object. Takes some optional arguments:
 
@@ -163,23 +163,23 @@ Consult L<Compress::Zlib> for more detail regarding these options.
 
 =over
 
-=item get
+=item C<get>
 
-=item get_one_start
+=item C<get_one_start>
 
-=item get_one
+=item C<get_one>
 
 Takes an arrayref which is contains streams of compressed input. Returns an arrayref of uncompressed streams.
 
-=item get_pending
+=item C<get_pending>
 
 Returns any data in a filter's input buffer. The filter's input buffer is not cleared, however.
 
-=item put
+=item C<put>
 
 Takes an arrayref containing streams of uncompressed output, returns an arrayref of compressed streams.
 
-=item clone
+=item C<clone>
 
 Makes a copy of the filter, and clears the copy's buffer.
 
@@ -193,7 +193,7 @@ Martijn van Beers <martijn@cpan.org>
 
 =head1 LICENSE
 
-Copyright C<(c)> Chris Williams and Martijn van Beers.
+Copyright E<copy> Chris Williams and Martijn van Beers.
 
 This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
