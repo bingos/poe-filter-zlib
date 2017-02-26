@@ -1,26 +1,20 @@
 package POE::Filter::Zlib;
 
+#ABSTRACT: A POE filter wrapped around Compress::Zlib
+
 use strict;
 use warnings;
 
 use POE::Filter::Zlib::Stream;
 use Compress::Raw::Zlib qw(Z_FINISH);
 
-use vars qw($VERSION);
-
-$VERSION = '2.02';
-
 sub new {
   return POE::Filter::Zlib::Stream->new(flushtype => Z_FINISH);
 }
 
-1;
+qq[Zee Lib];
 
-__END__
-
-=head1 NAME
-
-POE::Filter::Zlib - A POE filter wrapped around Compress::Zlib
+=pod
 
 =head1 SYNOPSIS
 
@@ -52,7 +46,7 @@ L<POE::Filter::Zlib::Stream> is recommended for that type of activity.
 
 =item C<new>
 
-Creates a new POE::Filter::Zlib object. Takes one optional argument, 
+Creates a new POE::Filter::Zlib object. Takes one optional argument,
 
   'level': the level of compression to employ.
 
@@ -89,18 +83,6 @@ Makes a copy of the filter, and clears the copy's buffer.
 Sets the level of compression employed to the given value. If no value is supplied, returns the current level setting.
 
 =back
-
-=head1 AUTHOR
-
-Chris Williams <chris@bingosnet.co.uk>
-
-Martijn van Beers <martijn@cpan.org>
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams and Martijn van Beers.
-
-This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
